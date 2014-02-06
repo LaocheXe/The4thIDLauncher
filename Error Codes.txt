@@ -1,0 +1,3 @@
+100 - Game Path Not Detected - They might have changed the location of the default install path of arma3 - When Launching
+101 - No Mods Selected - They have selected to launch the game with mods enable but they did not select any mods - When Launching
+102 - Game Path Not Detected - They might have changed the location of the default install path of arma3 - When Form Loads - Checking for mods in arma path

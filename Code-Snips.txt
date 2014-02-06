@@ -1,0 +1,65 @@
+Launch Button
+
+            string arma3Path;
+            string selectedMods;
+           // string steamFolder64 = @"C:\Program Files (x86)\Steam\steamapps\common\Arma 3";
+           // string steamFolder32 = @"C:\Program Files\Steam\steamapps\common\Arma 3";
+            
+            if (IntPtr.Size == 8)
+            {
+                //arma3Path = steamFolder64 + "arma3.exe";
+                arma3Path = @"C:\Program Files (x86)\Steam\steamapps\common\Arma 3\arma3.exe";
+            }
+            else
+            {
+                //arma3Path = steamFolder32 + "arma3.exe";
+                arma3Path = @"C:\Program Files\Steam\steamapps\common\Arma 3\arma3.exe";
+            }
+
+            if (ckb4thID.Checked && !ckbCba3a.Checked)
+            {
+                selectedMods = "-mod=@4thID;";
+            }
+            else if (ckbCba3a.Checked && !ckb4thID.Checked)
+            {
+                selectedMods = "-mod=@CBA_A3;";
+            }
+            else if (ckb4thID.Checked && ckbCba3a.Checked)
+            {
+                selectedMods = "-mod=@4thID; -mod=@CBA_A3;";
+            }
+            else
+            {
+                selectedMods = "";
+            }
+
+            // Error Catching
+
+            // If No Mod Radio Button is Checked
+            if (rdoNomod.Checked)
+            {
+                // Start Game
+                Process.Start(arma3Path);
+            }
+            // If With Mod Radio Button is Checked
+            else if (rdoMod.Checked)
+            {
+                if (!ckb4thID.Checked && !ckbCba3a.Checked)
+                {
+                    MessageBox.Show("Error No Mods Selected.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                }
+                else
+                {
+                    // Start Game With Mods
+                     ProcessStartInfo info = new ProcessStartInfo();
+                      info.FileName = arma3Path;
+                    //                   WORK IN PROGRESS
+                      info.Arguments = selectedMods;
+                      Process.Start(info);
+                }
+            }
+
+            if (chkPlayClose.Checked)
+            {
+                this.Close();
+            }
