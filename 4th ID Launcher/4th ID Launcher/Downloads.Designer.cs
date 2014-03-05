@@ -36,6 +36,7 @@
             this.btnDownload2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.grp4thid = new System.Windows.Forms.GroupBox();
+            this.btnUnZip1 = new System.Windows.Forms.Button();
             this.btnCancel1 = new System.Windows.Forms.Button();
             this.lblDownloaded1 = new System.Windows.Forms.Label();
             this.lblPrecentage1 = new System.Windows.Forms.Label();
@@ -43,7 +44,6 @@
             this.btnDownload1 = new System.Windows.Forms.Button();
             this.prg4thIDmd = new System.Windows.Forms.ProgressBar();
             this.btnExit = new System.Windows.Forms.Button();
-            this.btnUnZip1 = new System.Windows.Forms.Button();
             this.grpAcre.SuspendLayout();
             this.grpCba.SuspendLayout();
             this.grp4thid.SuspendLayout();
@@ -138,6 +138,20 @@
             this.grp4thid.TabStop = false;
             this.grp4thid.Text = "4th ID Mod";
             // 
+            // btnUnZip1
+            // 
+            this.btnUnZip1.BackColor = System.Drawing.Color.White;
+            this.btnUnZip1.Enabled = false;
+            this.btnUnZip1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUnZip1.ForeColor = System.Drawing.Color.Black;
+            this.btnUnZip1.Location = new System.Drawing.Point(212, 105);
+            this.btnUnZip1.Name = "btnUnZip1";
+            this.btnUnZip1.Size = new System.Drawing.Size(133, 23);
+            this.btnUnZip1.TabIndex = 13;
+            this.btnUnZip1.Text = "I&nstall";
+            this.btnUnZip1.UseVisualStyleBackColor = false;
+            this.btnUnZip1.Click += new System.EventHandler(this.btnUnZip1_Click);
+            // 
             // btnCancel1
             // 
             this.btnCancel1.BackColor = System.Drawing.Color.White;
@@ -214,20 +228,6 @@
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // btnUnZip1
-            // 
-            this.btnUnZip1.BackColor = System.Drawing.Color.White;
-            this.btnUnZip1.Enabled = false;
-            this.btnUnZip1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUnZip1.ForeColor = System.Drawing.Color.Black;
-            this.btnUnZip1.Location = new System.Drawing.Point(212, 105);
-            this.btnUnZip1.Name = "btnUnZip1";
-            this.btnUnZip1.Size = new System.Drawing.Size(133, 23);
-            this.btnUnZip1.TabIndex = 13;
-            this.btnUnZip1.Text = "I&nstall";
-            this.btnUnZip1.UseVisualStyleBackColor = false;
-            this.btnUnZip1.Click += new System.EventHandler(this.btnUnZip1_Click);
-            // 
             // Downloads
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -241,7 +241,7 @@
             this.ForeColor = System.Drawing.Color.White;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Downloads";
-            this.Text = "Downloads - 4th INFANTRY DIVISION";
+            this.Text = "Downloads - UNITED STATES JOINT FORCES COMMAND";
             this.Load += new System.EventHandler(this.Downloads_Load);
             this.grpAcre.ResumeLayout(false);
             this.grpAcre.PerformLayout();

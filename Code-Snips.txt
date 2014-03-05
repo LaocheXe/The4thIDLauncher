@@ -63,3 +63,14 @@ Launch Button
             {
                 this.Close();
             }
+
+
+
+
+
+                if (ckbxlSMods.CheckedItems != null)
+                {
+                    foreach (string s in ckbxlSMods.CheckedItems)
+
+                        selectedMods = "-mod=" + s + ";";
+                }

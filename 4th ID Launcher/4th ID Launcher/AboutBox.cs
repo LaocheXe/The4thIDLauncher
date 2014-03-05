@@ -107,9 +107,18 @@ namespace _4th_ID_Launcher
 
         }
 
-        private void okButton_Click(object sender, EventArgs e)
+        private void btnOk_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        private void btnOk_MouseEnter(object sender, EventArgs e)
+        {
+            btnOk.BackgroundImage = USJFCOM_Launcher.Properties.Resources.Button2_hover;
+        }
+
+        private void btnOk_MouseLeave(object sender, EventArgs e)
+        {
+            btnOk.BackgroundImage = USJFCOM_Launcher.Properties.Resources.Button_nonhover;
         }
     }
 }

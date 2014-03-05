@@ -50,7 +50,7 @@
             this.Controls.Add(this.web4thIDSite);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Browser";
-            this.Text = "Browser - 4th INFANTRY DIVISION";
+            this.Text = "Browser - UNITED STATES JOINT FORCES COMMAND";
             this.Load += new System.EventHandler(this.Browser_Load);
             this.ResumeLayout(false);
 
